@@ -121,6 +121,7 @@ class ViewController: NSViewController {
             
             let ctr = selectedItem.length
             construction.clength -= ctr
+            
             viewModel.remove(item: selectedItem, from: construction)
             //
             print("remove item update construction length")

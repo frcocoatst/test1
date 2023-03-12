@@ -6,23 +6,7 @@
 
 import AppKit
 
-/**
- General Notes:
- 
- * Color class represents a color in the app, and Collection
- represents a collection of colors.
- * They are classes and not structs because we want their instances
- to pass around by reference and changes made to an object to affect
- the original one, not a copy of it.
- * Both conform to Equatable protocol for comparing objects. To make
- comparison easy they contain the "id" property as identifiers.
 
- */
-
-
-/**
- It represents a color object in app.
- */
 class Item: Equatable, CustomStringConvertible {
     var id: Int?
     var tag: String = "TAG"
@@ -45,16 +29,6 @@ class Item: Equatable, CustomStringConvertible {
         self.comment = comment
     }
     
-    
-    /**
-     It returns a NSColor object based on the RGBA values
-     of the current object.
-
-    func toNSColor() -> NSColor {
-        return NSColor(red: 0xff, green: 0x55, blue: 0x66, alpha: 0xaa)
-    }
-     */
-
     
     /**
      Update Item object using the TLV values given as arguments.
